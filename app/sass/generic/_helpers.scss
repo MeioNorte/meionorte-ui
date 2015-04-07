@@ -1,6 +1,11 @@
 /** HELPERS
 /** ================================ */
 
+/* Display Show/Hide */ 
+.hide { display:none!important;visibility:hidden!important }
+.show { display:block!important;visibility:visible!important }
+
+
 /* Add remove floats */
 .pull-right { float:right!important; }
 .pull-left { float:left !important; }

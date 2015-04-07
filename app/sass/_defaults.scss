@@ -9,6 +9,8 @@ $base-background-color: #e5e5e5!default;
 
 /* Base stuff */
 $base-font-color: rgba(0, 0, 0, 0.81)!default;
+$base-font-dark-color: rgba(255,255,255, 0.81)!default;
+
 $base-font-size: 16px!default;
 $base-line-height: 24px!default;
 
@@ -36,8 +38,9 @@ $x-small-size: 12px!default;
 $xx-small-size: 10px!default;
 
 /* Radius */
-$base-rounded-radius: 5px!default;
-$base-circle-radius: 120px!default;
+$base-radius: 4px!default;
+$base-circle-radius: 50%!default;
+$base-rounded-radius: 100px!default;
 
 
 // cc: inuit.css
