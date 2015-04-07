@@ -4,12 +4,16 @@
 /* Border box */
 $global-border-box: true!default;
 
+/* Background */
+$base-background-color: #e5e5e5!default;
+
 /* Base stuff */
+$base-font-color: rgba(0, 0, 0, 0.81)!default;
 $base-font-size: 16px!default;
 $base-line-height: 24px!default;
 
 /* Base font-family */
-$base-font-family: sans-serif!default;
+$base-font-family: 'Helvetica Neue',sans-serif!default;
 
 /* Responsive */
 $responsive: true!default;
@@ -34,8 +38,6 @@ $xx-small-size: 10px!default;
 /* Radius */
 $base-rounded-radius: 5px!default;
 $base-circle-radius: 120px!default;
-
-
 
 
 // cc: inuit.css

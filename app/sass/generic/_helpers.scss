@@ -21,6 +21,11 @@
 .weight-normal { font-weight:400!important; }
 .weight-semibold { font-weight:600!important; }
 
+/* Font Smoothing */
+.smooth-out { @include font-smoothing(off); }
+.smooth-in { @include font-smoothing(on); }
+
+
 /* Images Helpers */
 img{
     max-width:100%;
@@ -28,7 +33,6 @@ img{
 	font-size: 0;
 	vertical-align: middle;
     border:0;
-	// For IE > http://css-tricks.com/ie-fix-bicubic-scaling-for-images
 	-ms-interpolation-mode: bicubic;
 }
 
@@ -67,6 +71,11 @@ figure {
 
 /* Image Circle */
 .img-circle { @include border-radius($base-circle-radius); }
+
+/* Indent buttons */
+.button.indent {
+    span {display:none;}
+}
 
 /* Help cursor */
 .informative { cursor:help!important; }

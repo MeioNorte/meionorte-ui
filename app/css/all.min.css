@@ -4,6 +4,7 @@
 /** DEFAULTS
 /** ================================ */
 /* Border box */
+/* Background */
 /* Base stuff */
 /* Base font-family */
 /* Responsive */
@@ -16,11 +17,7 @@
 /* Line height font */
 /* Clearfix */
 /* Text Overflow */
-/* -------------------------------------------------------------
-  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
-  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
-------------------------------------------------------------- */
-/* ADDS A BROWSER PREFIX TO THE PROPERTY */
+/* Font Smoothing */
 /* BACKGROUND GRADIENT */
 /* BACKGROUND HORIZONTAL */
 /* BACKGROUND RADIAL */
@@ -94,6 +91,15 @@
 .weight-semibold {
   font-weight: 600 !important; }
 
+/* Font Smoothing */
+.smooth-out {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto; }
+
+.smooth-in {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto; }
+
 /* Images Helpers */
 img {
   max-width: 100%;
@@ -148,6 +154,10 @@ figure {
   -o-border-radius: 120px;
   border-radius: 120px; }
 
+/* Indent buttons */
+.button.indent span, .button span {
+  display: none; }
+
 /* Help cursor */
 .informative {
   cursor: help !important; }
@@ -170,6 +180,7 @@ figure {
     */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -177,11 +188,12 @@ figure {
 
 /* Reset blocks */
 html {
-  font-family: sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   overflow-y: scroll;
-  min-height: 100%; }
+  min-height: 100%;
+  color: rgba(0, 0, 0, 0.81); }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
   display: block; }
@@ -279,8 +291,11 @@ input[type="checkbox"], input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  -khtml-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
   box-sizing: content-box; }
 
 input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
@@ -297,6 +312,48 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+/** DEPTHS
+/** ================================ */
+.depth1 {
+  -webkit-box-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.24);
+  -khtml-box-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.24);
+  -moz-box-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.24);
+  -ms-box-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.24);
+  -o-box-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1.5px 2.5px rgba(0, 0, 0, 0.24); }
+
+.depth2 {
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.23);
+  -khtml-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.23); }
+
+.depth3 {
+  -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.23);
+  -khtml-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.23); }
+
+.depth4 {
+  -webkit-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.22);
+  -khtml-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 10px 12px rgba(0, 0, 0, 0.22); }
+
+.depth5 {
+  -webkit-box-shadow: 0 15px 17px rgba(0, 0, 0, 0.22);
+  -khtml-box-shadow: 0 15px 17px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 15px 17px rgba(0, 0, 0, 0.22);
+  -ms-box-shadow: 0 15px 17px rgba(0, 0, 0, 0.22);
+  -o-box-shadow: 0 15px 17px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 15px 17px rgba(0, 0, 0, 0.22); }
 
 /** GRID
 /** ================================ */
@@ -327,5 +384,27 @@ h6 {
 /** ================================ */
 /** LIST
 /** ================================ */
-li > ul, li > ol {
-  margin-bottom: 0; }
+.button {
+  height: 50px;
+  width: 50px;
+  float: left;
+  background: #fff; }
+
+.button-circle {
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -webkit-transition: all .2s ease-in-out;
+  -khtml-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
+  .button-circle:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19); }
+  .button-circle:active {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25); }
