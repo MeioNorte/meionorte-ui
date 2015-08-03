@@ -1,28 +1,30 @@
-var gulp       = require('gulp'),
-    watch      = require('gulp-watch'),
-    sass       = require('gulp-sass'),
-    concat     = require('gulp-concat'),
-    //uglify     = require('gulp-uglify'),
-    gutil      = require('gulp-util'),
-    livereload = require('gulp-livereload'),
-    connect    = require('gulp-connect');
+var gulp                  = require('gulp'),
+    watch                 = require('gulp-watch'),
+    sass                  = require('gulp-sass'),
+    concat                = require('gulp-concat'),
+    //uglify              = require('gulp-uglify'),
+    gutil                 = require('gulp-util'),
+    livereload            = require('gulp-livereload'),
+    connect               = require('gulp-connect');
+    // historyApiFallback    = require('connect-history-api-fallback');
 
 var paths = {
   html:    ['app/*.html'],
-  scripts: ['app/js/vendor/**/*.js', 'app/js/core.js', 'app/js/components/**/*.js'],
-  styles:  ['app/sass/**/*.scss']
+  scripts: ['app/js/vendor/**/*.js', 'app/js/app.js'],
+  styles:  ['app/scss/**/*.scss']
 };
 
 gulp.task('connect', function() {
-  console.log("Conectando Server");
-   connect.server({
+
+  connect.server({
     root: 'app',
     livereload: true
   });
+
 });
 
 gulp.task('html', function () {
-  gulp.src('app/*.html')
+  gulp.src('app/templates/**/*.html')
     .pipe(connect.reload());
 });
 
@@ -38,16 +40,20 @@ gulp.task('scripts', function() {
 gulp.task('styles', function () {
   console.log("Stylesheets");
   return gulp.src(paths.styles)
-    .pipe(sass({outputStyle: 'expanded', errLogToConsole: true}))
+    .pipe(sass({outputStyle: 'compressed', errLogToConsole: true}))
     .pipe(concat('all.min.css'))
     .pipe(gulp.dest('app/css'))
     .pipe(connect.reload());
 });
 
+
 gulp.task('watch', function() {
   gulp.watch(paths.html, ['html']);
 	gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.styles, ['styles']);
+
+  livereload.listen();
+  
 });
 
 gulp.task('default', [ 'watch', 'connect', 'html', 'scripts', 'styles' ]);

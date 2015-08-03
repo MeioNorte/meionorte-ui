@@ -1,34 +1,844 @@
 <!doctype html>
 <html class="no-js" lang="pt-BR">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Meio Norte Material Design</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<head>
 
-        <link rel="stylesheet" href="css/all.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Shiva User Interface</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    <body>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <h1>Meio Norte Material Design</h1>
+  <link rel="stylesheet" href="css/all.min.css">
 
-        <p>
+</head>
+<body>
 
-            <a class="button" href="#"><span>Button</span></a>
-            <a class="button button-rounded" href="#"><span>Button</span></a>
-            <a class="button button-circle" href="#"><span>Button</span></a>
-            <a class="button button-circle" href="#"><span>Button</span></a>
-            <a class="button button-circle" href="#"><span>Button</span></a>
-            <a class="button button-circle" href="#"><span>Button</span></a>
-            <a class="button button-circle" href="#"><span>Button</span></a>
 
-        </p>
+  <!-- Menu Lateral -->
+  <nav class="navigation">
+    <div class="content">
 
-        <script src="js/all.min.js"></script>
+      <a href="#" title="" class="item">
+        Reportagem
+      </a>
 
-    </body>
+      <div title="" class="item dropdown">
+
+        <a class="dropdown-menu" href="#" data-activates="dropdown2">
+          Cadastros
+        </a>
+
+        <div id="dropdown2" class="dropdown-content">
+          
+          <a href="#">
+            Usuários
+          </a>
+
+          <a href="#">
+            <i class="icon-plus-1"></i>
+            Novo Usuário
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div href="#" title="" class="item dropdown">
+        <a class="dropdown-menu" href="#" data-activates="dropdown3">
+          Mídias
+        </a>
+
+        <div id="dropdown3" class="dropdown-content">
+          
+          <a href="#">
+            Mídias
+          </a>
+
+          <a href="#">
+            <i class="icon-plus-1"></i>
+            Nova Mídia
+          </a>
+          
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+    <div href="#" title="" class="item item-configuration">
+      <i class="icon-cog"></i>
+      Configurações
+    </div>
+  </nav>
+
+  <!-- Barra Primária -->
+  <header class="header-bar">
+
+    <div class="full-width full-height">
+
+      <a href="#" title="Menu" class="btn-menu-collapse">
+        <i class="icon-menu-1"></i>
+        <span>Menu</span>
+      </a>
+
+      <h1 class="logo">
+
+        <div class="img-logo">
+
+          <a href="#">
+            <img src="images/logo.png" />  
+          </a>
+
+          <small>ADMIN</small>
+
+        </div>
+
+      </h1>
+
+      <div class="header-bar-icons">
+
+        <div class="item-icon">
+          <small>2</small>
+          <a class="item-icon" href="email.html">
+            <i class="icon-mail-alt"></i>
+          </a>
+        </div>
+
+        <div class="item-icon">
+          <a class="dropdown" href="#">
+            <i class="icon-doc-text-inv"></i>
+          </a>
+        </div>
+
+        <div class="item-icon">
+          <a class="item-icon btn-chat" href="#">
+            <i class="icon-chat-2"></i>
+          </a>
+        </div>
+
+        <div class="item-user dropdown" href="#">
+
+          <img class="btn-dropdown dropdown-button" src="http://placehold.it/45x45" data-activates="dropdown1" />
+
+
+          <div id="dropdown1" class="dropdown-content">
+            <a href="#">
+              <i class="icon-cog-5"></i>
+              Editar Perfil
+            </a>
+            <a href="#">
+              <i class="icon-logout"></i>
+              Sair
+            </a>
+          </div>
+
+        </div>  
+
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="main-container">
+
+  <div class="inner-main-container content">
+
+    <!-- MODELO TOPO -->
+    <header class="header-main-container">
+
+      <a href="#" class="back-to-history">
+        <i class="icon-left-2"></i>
+      </a>
+
+      <h1 class="title-main-container">
+        Titulo
+      </h1>
+
+      <div class="actions-main-container">
+
+        <a class="button button-add tooltipped" data-position="top" data-delay="50" data-tooltip="Novo">
+          <i class="icon-plus-1"></i>
+        </a>
+
+      </div>
+    </header>
+
+    <!-- MODELO FORMS -->
+    <section class="form-content">
+
+      <form action="" method="">
+
+        <div class="content">
+
+          <div class="col12">
+
+            <div class="inner-content">
+
+              <div class="input-field">
+                <select>
+                  <option value="" disabled selected>Escolha umas das opções</option>
+                  <option value="1">Opção 1</option>
+                  <option value="2">Opção 2</option>
+                  <option value="3">Opção 3</option>
+                </select>
+                <label>Select Campo</label>
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="content">
+
+          <div class="col6">
+
+            <div class="form-input-duo padding-right-5">
+              <input type="text" name="" placeholder="Qual seu email?" />
+            </div>
+
+          </div>
+
+          <div class="col6 push6">
+
+           <a onclick="Materialize.toast('Hey You', 3000, 'rounded')" class="button button-success button-rounded">Botão!</a>
+
+          </div>
+
+        </div>
+
+        <div class="content">
+
+          <div class="col12">
+
+            <div class="form-input">
+              <input type="text" name="" placeholder="Qual o seu nome?" />
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="content">
+
+          <div class="col6">
+
+           
+              <!-- Modal Trigger -->
+              <a class="button button-info button-rounded modal-trigger" href="#modal1">Modal</a>
+
+              <!-- Modal Structure -->
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>Modal Topo</h4>
+                  <p>Texto Aqui</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#!" class=" modal-action modal-close button button-rounded button-success">Sim</a>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="col6 push6">
+
+
+            <p>
+              <input type="checkbox" id="test5" />
+              <label for="test5">Item</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test6" checked="checked" />
+              <label for="test6">Item</label>
+            </p>
+            <p>
+              <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+              <label for="filled-in-box">Item</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test7" checked="checked" disabled="disabled" />
+              <label for="test7">Item</label>
+            </p>
+            <p>
+              <input type="checkbox" id="test8" disabled="disabled" />
+              <label for="test8">Item</label>
+            </p>
+
+
+          </div>
+
+        </div>
+
+        <div class="content">
+
+          <div class="col12">
+
+            <!-- Switch -->
+            <div class="switch">
+              <label>
+                Off
+                <input type="checkbox">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+
+            <!-- Disabled Switch -->
+            <div class="switch">
+              <label>
+                Off
+                <input disabled type="checkbox">
+                <span class="lever"></span>
+                On
+              </label>
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="content">
+
+          <div class="col6">
+
+
+           <input type="date" class="datepicker">
+
+
+          </div>
+
+           <div class="col6 push6">
+
+            SELECT
+
+            </div>
+
+        </div>
+
+
+        <div class="content">
+          <div class="inner-content">
+            <button type="button" class="button button-rounded button-success">Cadastrar</button>
+            <button type="button" class="button button-rounded button-error">Cancelar</button>
+          </div>
+        </div>
+
+    </form>
+
+  </section>
+
+  
+
+
+  <ul class="collapsible popout no-style margin-bottom-40" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="icon-arrows-cw"></i>Primeiro</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="icon-paper-plane"></i>Segundo</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="icon-beaker"></i>Terceiro</div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+        
+
+  <div class="mail-wrapper hide">
+
+    <aside class="mail-sidebar">
+
+      <div class="mail-sidebar-button">
+        <button type="button" class="button button-error button-rounded">
+          Escrever mensagem
+        </button>
+      </div>
+
+      <div class="mail-sidebar-itens">
+        <div class="sidebar-item">
+          <a href="#">
+            Entrada <span>(2)</span>
+          </a>
+        </div>
+      </div>
+
+    </aside>
+
+    <div class="mail-content">
+
+      <div class="mail-list">
+        a
+      </div>
+      <div class="mail-opened">
+        <div class="content">
+
+          <span class="no-selected">
+            Você não selecionou nenhum e-mail
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</main><!-- Fim do Conteúdo Principal -->
+
+<!-- Chat Box Sidebar -->
+<aside class="box-chat">
+
+  <div class="inner-chat">
+
+    <header class="box-chat-header">
+
+      <div class="inner-chat-header">
+
+        <h2 class="title">
+          <i class="chat-icon icon-chat-2"></i>
+          Lista de contatos
+        </h2>
+
+        <a href="#" class="btn-close-chat">
+          <i class="icon-cancel-1"></i>
+        </a>
+
+        <a href="#" class="btn-config-chat">
+          <i class="icon-cog"></i>
+        </a>
+
+      </div>
+
+      <div class="box-chat-search">
+
+        <i class="icon-search-1"></i>
+        <input type="search" name="busca" placeholder="Encontre alguem" />
+
+      </div>
+
+    </header>
+
+    <div class="box-chat-list">
+
+      <div class="box-chat-content">
+
+        <div class="box-chat-item">
+          <strong>A</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>B</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>C</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+        <div class="box-chat-item">
+          <strong>Z</strong>
+          <ul class="no-style">
+
+            <li>
+              <a href="#">
+                <img class="chat-item-image" src="http://placehold.it/45x45" />
+                <span class="chat-item-name">Allan Alexandre</span>
+                <small class="chat-item-description">Repórter</small>
+              </a>
+              <span class="online"></span>
+            </li>
+
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </aside><!-- Fim do Chat Box Sidebar -->
+
+  <!-- Conversas -->
+  <div class="chat-open">
+
+    <div class="inner-chat-open">
+
+      <!-- Chat Fechado com novas mensagens -->
+      <section class="chat-item">
+
+        <header class="chat-item-header chat-new-message">
+
+          <i class="chat-icon icon-chat-2"></i>
+          <span class="chat-name">Allan Alexandre</span>
+
+          <a href="#" class="chat-item-close">
+            <i class="icon-cancel-1"></i>
+          </a>
+
+          <a href="#" class="chat-item-minimize">
+            <i class="icon-minus-1"></i>
+          </a>
+
+
+        </header>
+
+        <div class="chat-item-content">
+
+          <div class="chat-item-message">
+
+            <div class="message me">
+              <figure class="message-image">
+                <img src="http://placehold.it/45x45" />
+              </figure>
+              <div class="message-text">
+                Nulla rutrum dui quis nibh dignissim aliquam. <a href="#">Quisque orci arcu, condimentum quis dui vel, lobortis volutpat ipsum</a>
+              </div>
+              <small class="message-info">
+                Allan - 12 minutos
+              </small>
+            </div>
+
+            <div class="message he">
+              <figure class="message-image">
+                <img src="http://placehold.it/45x45" />
+              </figure>
+              <div class="message-text">
+                Nulla rutrum dui quis nibh dignissim aliquam. 
+              </div>
+              <small class="message-info">
+                Allan - 12 minutos
+              </small>
+            </div>
+
+          </div> 
+
+          <div class="chat-send-message">
+            <textarea class="chat-send-text" rows="" cols=""></textarea>
+            <button class="chat-send-button" type="submit">
+              <i class="icon-paper-plane"></i>
+            </button>
+          </div> 
+
+
+        </div>
+
+
+      </section>
+
+      <!-- Chat Fechado Sem mensagens -->
+      <section class="chat-item">
+
+        <header class="chat-item-header">
+
+          <i class="chat-icon icon-chat-2"></i>
+          <span class="chat-name">Allan Alexandre asd as as das </span>
+
+          <a href="#" class="chat-item-close">
+            <i class="icon-cancel-1"></i>
+          </a>
+
+          <a href="#" class="chat-item-minimize">
+            <i class="icon-minus-1"></i>
+          </a>
+
+        </header>
+
+        <div class="chat-item-content">
+
+          <div class="chat-item-message">
+
+            <div class="message me">
+              <figure class="message-image">
+                <img src="http://placehold.it/45x45" />
+              </figure>
+              <div class="message-text">
+                Nulla rutrum dui quis nibh dignissim aliquam. <a href="#">Quisque orci arcu, condimentum quis dui vel, lobortis volutpat ipsum</a>
+              </div>
+              <small class="message-info">
+                Allan - 12 minutos
+              </small>
+            </div>
+
+            <div class="message he">
+              <figure class="message-image">
+                <img src="http://placehold.it/45x45" />
+              </figure>
+              <div class="message-text">
+                Nulla rutrum dui quis nibh dignissim aliquam. 
+              </div>
+              <small class="message-info">
+                Allan - 12 minutos
+              </small>
+            </div>
+
+          </div> 
+
+          <div class="chat-send-message">
+            <textarea class="chat-send-text" rows="" cols=""></textarea>
+            <button class="chat-send-button" type="submit">
+              <i class="icon-paper-plane"></i>
+            </button>
+          </div> 
+
+
+        </div>
+
+      </section>
+
+      <!-- Chat Aberto -->
+      <section class="chat-item">
+
+        <header class="chat-item-header">
+
+          <i class="chat-icon icon-chat-2"></i>
+          <span class="chat-name">Allan Alexandre asd as as das </span>
+
+          <a href="#" class="chat-item-close">
+            <i class="icon-cancel-1"></i>
+          </a>
+
+          <a href="#" class="chat-item-minimize">
+            <i class="icon-minus-1"></i>
+          </a>
+
+        </header>
+
+        <div class="chat-item-content">
+
+          <div class="chat-item-message">
+
+            <div class="message me">
+              <figure class="message-image">
+                <img src="http://placehold.it/45x45" />
+              </figure>
+              <div class="message-text">
+                Nulla rutrum dui quis nibh dignissim aliquam. <a href="#">Quisque orci arcu, condimentum quis dui vel, lobortis volutpat ipsum</a>
+              </div>
+              <small class="message-info">
+                Allan - 12 minutos
+              </small>
+            </div>
+
+            <div class="message he">
+              <figure class="message-image">
+                <img src="http://placehold.it/45x45" />
+              </figure>
+              <div class="message-text">
+                Nulla rutrum dui quis nibh dignissim aliquam. 
+              </div>
+              <small class="message-info">
+                Allan - 12 minutos
+              </small>
+            </div>
+
+          </div> 
+
+          <div class="chat-send-message">
+            <textarea class="chat-send-text" rows="" cols=""></textarea>
+            <button class="chat-send-button" type="submit">
+              <i class="icon-paper-plane"></i>
+            </button>
+          </div> 
+
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </div><!-- // Fim Conversas -->
+
+
+
+  <script src="js/all.min.js"></script>
+
+</body>
 </html>

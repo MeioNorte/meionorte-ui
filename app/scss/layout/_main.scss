@@ -1,0 +1,569 @@
+/* Main Application */
+/***********************************/
+
+body {
+  background:#f8f8f8;padding-top:80px;
+}
+
+/* Barra Principal */
+/***********************************/
+.header-bar {
+
+	position:fixed;left:0;top:0;background:#fff;width:100%;max-width:100%;z-index:90;height:80px;
+
+	@include transition(all, 0.2s, ease-in-out);
+  @extend .depth1;
+
+  .btn-menu-collapse {
+    position:absolute;left:20px;top:18px;color:$dark-primary-color;
+    i {
+      font-size:38px;float:left;
+    }
+    span {
+      float: left;line-height: 46px;font-weight: 600;
+    }
+  }
+
+  .logo {
+    margin:15px auto;width:236px;position:relative;
+
+    small {
+       background: #e53935;
+      color: #fff;
+      font-size: 12px;
+      left: -52px;
+      padding: 6px 20px 5px 14px;
+      position: absolute;
+      top: 2px;
+      transform: rotate(-90deg);
+
+    @include border-radius(5px);
+    }
+  }
+
+  .header-bar-icons {
+    position:absolute;right:20px;top:18px;line-height:30px;
+
+    .item-icon {
+      float:left;
+      a {
+        float:left;padding:8px 10px;margin-right:0;color:$dark-primary-color;text-decoration:none;
+        @include border-radius(50%);
+         &:active {
+          background:#f1f1f1;
+        }
+      }
+
+      i {
+        font-size:18px;
+      }
+      small {
+        color:#fff;font-weight:bold;float:left;padding: 2px 8px;background:color($red, 400);margin:11px 0;line-height:20px;
+
+        @include border-radius(50%);
+
+      }
+      .btn-dropdown {
+        width:45px;
+      }
+
+    }
+
+    .item-user {
+      float:left;margin-left:20px;
+
+      img {
+
+        cursor:pointer;
+        
+        @include border-radius(50%);
+        @include transition(all, 0.2s, ease-in-out);
+
+        &:hover {
+          opacity:0.8;
+        }
+      }
+      
+      #dropdown1 {
+        width:180px;top:50px!important;background:#fff;height:100px;opacity:0;display:none;
+
+        a {
+          display:block;padding:10px 5px;background:#fff;text-decoration: none;color:#666;
+
+          &:hover {
+            background:#f2f2f2;
+          }
+        }
+      }
+
+    }
+    .dropdown {
+      padding-right:10px!important;
+      &:after {
+        display:none!important;
+      }
+    }
+  }
+
+}
+
+/* Menu */
+/***********************************/ 
+.navigation {
+
+  position:fixed;top:0;width:100%;top:-66px;height:52px;background:$dark-primary-color;border-right:1px solid #e5e5e5;z-index:90;
+
+  @include transition(all, 0.2s, ease-in-out);
+  @include box-shadow(0, 4px, 10px, -5px, rgba(0,0,0,0.6));
+
+  .item {
+    position:relative;color:#fff;text-decoration:none;float:left;height:52px;line-height:52px;font-size:18px;text-shadow:0 0 2px rgba(0,0,0,0.2);padding:0 15px;cursor:pointer;
+  
+    &:hover {
+      background:rgba(0,0,0,.1);
+    }
+    
+    a {
+      color:#fff;text-decoration:none;
+    }
+  }
+
+  .item-configuration {
+    float:right;
+  }
+  .container-full {
+    overflow: visible!important;
+  }
+
+
+#dropdown2, #dropdown3 {
+    width:180px;top:42px!important;background:#fff;opacity:0;
+    a {
+      display:block;background:#fff;text-decoration: none;color:#666!important; 
+      font-size: 16px;
+      padding: 0 10px;
+      text-decoration: none;
+      text-shadow: 0 0 0;
+
+      &:hover {
+        background:rgba(0,0,0,0.08)!important;
+      }
+    }
+  }
+
+}
+.nav-open {
+  top:80px;
+}
+
+/* Conteúdo Principal */
+/***********************************/ 
+
+.main-container {
+  
+  position:relative;float:left;width:100%;height:100%;min-height:100%;padding:20px 0 100px 0;
+
+  .inner-main-container {
+    
+    background:#fff;margin-top:0;
+
+    @extend .depth1;
+
+    .content {
+      margin:20px 0;
+    }
+
+  }
+}
+
+
+/* Chat */
+/***********************************/ 
+
+.nav-open {
+  right:0!important;
+  .box-chat-header {
+    right:0!important;
+  }
+}
+
+.box-chat {
+
+  width:280px;position:fixed;right:-290px;top:0;z-index:90;background:#fff;height: 100%;display: block;white-space: nowrap;overflow: hidden;
+
+  @extend .depth2;
+  @include transition(all, 0.2s, ease-in-out);
+
+
+  .inner-chat {
+    position:relative;height:100%;
+  }
+
+  .box-chat-header {
+    
+    position:fixed;background:#fff;top:0;right:-290px;z-index:9990;width:280px;border-bottom:1px solid #e5e5e5;
+
+    @include transition(all, 0.2s, ease-in-out);
+   
+    .inner-chat-header {
+      text-align:center;background:$dark-primary-color;color:#fff;padding:15px 0 15px 10px;z-index:90;text-align:left;
+
+      .title {
+        font-size:18px;font-weight:600;
+      }
+
+      .btn-close-chat {
+        color:#fff;position:absolute;right:15px;top:15px;
+      }
+      .btn-config-chat {
+        color:#fff;position:absolute;right:40px;top:15px;
+      }
+    }
+    .box-chat-search {
+      text-align:center;margin:20px 0;
+      i {
+        font-size:22px;color:#999;
+      }
+      input {
+        width:220px;
+      }
+    }
+  }
+  .box-chat-list {
+
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    margin-top:0;
+
+    .box-chat-content {
+
+      margin-top:122px;
+
+      .box-chat-item {
+        width:100%;
+        strong {
+          color:$secondary-text;font-size:14px;background:#f8f8f8;width:100%;float:left;padding:3px 0 3px 5%;
+
+          border-top:1px solid #e5e5e5;
+          border-bottom:1px solid #e5e5e5;
+        }
+        ul {
+          li {
+            width:100%;padding:5%!important;float:left;position: relative;
+            
+            @include transition(all, 0.2s, ease-in-out);
+
+            &:hover {
+              background:rgba(0,0,0,0.03);
+            }
+
+            a {
+              text-decoration: none;color:$primary-text;
+            }
+
+            .chat-item-name {
+              width:100%;display:block;font-weight:400;
+            }
+
+            .chat-item-description {
+              clear:both;color:$secondary-text;font-size:14px;
+            }
+  
+            .chat-item-image {
+              float:left;margin-right:10px;
+
+              @include border-radius(50%);
+            }
+            .online {
+                background: color($green, 400);
+                border: 3px solid #fff;
+                bottom: 10px;
+                height: 16px;
+                left: 14px;
+                position: absolute;
+                width: 16px;
+
+              @include border-radius(50%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Conversas
+.chat-open {
+  width:100%;position: fixed;bottom:0;height:40px;z-index:90;
+
+  .inner-chat-open {
+    float:right;padding-right:320px;
+  }
+
+  .chat-item {
+  
+    float:left;margin-right:20px;width:250px;
+
+    .chat-item-header {
+      padding:10px 65px 10px 18px;width:100%;background:#212121;position:relative;cursor:pointer;display:table;color:#fff;
+
+      -webkit-border-top-left-radius: 8px;
+      -webkit-border-top-right-radius: 8px;
+      -moz-border-radius-topleft: 8px;
+      -moz-border-radius-topright: 8px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      a {
+        color:#fff;
+      }
+
+      .chat-icon  {
+        float:left;margin-right:5px;
+      }
+
+      .chat-name {
+        max-width:138px;float:left;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;
+      }
+
+      .chat-item-close {
+        position:absolute;right:10px;top:11px;cursor:pointer;
+      }
+      .chat-item-minimize {
+        position:absolute;right:30px;top:11px;cursor:pointer;
+      }
+
+    }
+    .chat-new-message {
+      background:color($green, 500);color: #fff!important;
+    }
+  }
+  .opened {
+    height: 340px;
+    margin-top: -300px;
+    width:250px;
+
+   @extend .depth1;
+
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    .chat-item-content {
+      background-color: #fff;
+      height:278px;
+      overflow-x:scroll;
+      overflow-y:none;
+      padding:10px;
+      position:relative;
+
+      @include box-shadow(0, 0, 0, 1px, #d7d7d7, inset);
+
+      .chat-item-message {
+
+        padding-bottom:34px;
+
+        // MENSAGEM
+        .message {
+          position:relative;
+          .message-image {
+            position:absolute;bottom:32px;
+            img {
+              @include border-radius(50%);
+            }
+          }
+          .message-text {
+            padding:10px;background:#f2f2f2;color:#212121;font-size:14px;font-weight:400;line-height:18px;
+
+            @include border-radius(5px);
+
+            a {
+              color:$dark-primary-color;font-weight:600;
+            }
+          }
+          .message-info {
+            font-size:12px;color:#999;
+          }
+        }
+
+
+      }
+
+      .chat-send-message {
+        position:fixed;bottom:0;margin-left:-10px;
+
+        .chat-send-text {
+            background: #fff;
+            height: 38px;
+            padding: 8px 45px 6px 5px;
+            resize: none;
+            width: 250px;
+
+          @include box-shadow(0, 0, 0, 1px, #d7d7d7, inset);
+
+          &:focus {
+            @include box-shadow(0, 0, 0, 1px, $dark-primary-color, inset);            
+          }
+        }
+        .chat-send-button {
+          position: absolute;right: 5px;bottom: 5px;background:#fff;
+        }
+      }
+      
+      // EU
+      .me {
+        padding:10px 55px 10px 10px;
+
+        .message-image {
+          right:0;
+        }
+        .message-text {
+          background:$light-primary;
+        }
+      }
+
+      // ELE
+      .he {
+        padding:10px 10px 10px 55px;
+
+        .message-image {
+          left:0;
+        }
+      }
+
+    }
+
+  }
+}
+
+
+/* Email */
+/***********************************/ 
+.mail-wrapper {
+  height: 100%;position: relative;
+
+  .mail-sidebar {
+    position:fixed;
+    width:250px;
+    height:100%;
+    background:$dark-primary-color;
+    float:left;
+    z-index:80;
+
+    .mail-sidebar-button {
+
+      @extend .text-center;
+      @extend .padding-top-30;
+      button {
+        background:$accent-color;
+        color:#fff;font-weight:600;
+      }
+
+    }
+
+    .mail-sidebar-itens {
+
+      width:100%;
+      @extend .padding-top-30;  
+
+      .sidebar-item {
+
+        @include box-shadow(5px, 0, 0, 0, $accent-color, inset);
+
+        a {
+          color:#fff;text-decoration: none;padding:12px 20px;font-size:16px;
+
+          &:hover {
+            background:rgba(0,0,0,0.1);
+          }
+
+          span {
+            font-weight:600;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .mail-content {
+    .mail-list {
+      position:relative;width:320px;margin-left:250px;float:left;border-right:1px solid #e5e5e5;background:#fff;
+    }
+    .mail-opened {
+      width:100%;position:relative;height:100%;
+
+      .no-selected {
+        font-size:36px;letter-spacing:-0.03em;font-weight:100;color:#999;display:inline-block;width:100%;text-align: center;margin-top:280px;
+      }
+    }
+  }
+}
+
+/* Topo Conteúdo */
+/***********************************/ 
+.header-main-container {
+  padding:60px 40px;background:$dark-primary-color;position:relative;
+  .title-main-container {
+    color:#fff;font-weight:300;
+  }
+  .actions-main-container {
+    position:absolute;right:40px;top:40px;
+
+    a {
+      float:left;color:#fff;
+    }
+    .button {
+      background:transparent;
+      @include border-radius(30px);
+      .icon-plus-1 {
+        font-size:20px;
+      }
+      span {font-weight:600;font-size:18px;}
+    }
+
+    .button-add {
+      height: 74px;
+    line-height: 78px;
+
+    bottom:-88px;
+    right:40px;
+      
+      color:#fff;
+      background:$accent-color;
+
+      i {
+        font-size:26px!important;
+      }
+
+      @include border-radius(50%);
+
+      &:hover {
+        opacity:1!important;
+      }
+    }
+     
+  }
+  .back-to-history {
+      font-size:22px;line-height:42px;padding:0 6px;color:#fff;float:left;margin:5px 20px 0 0;
+
+      @include border-radius(50%);
+
+      &:focus {
+        background:rgba(0,0,0,0.080);
+      }
+    }
+}
+
+
+
+
+

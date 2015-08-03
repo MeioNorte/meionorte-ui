@@ -1,0 +1,23 @@
+/** Dropdown
+/** ================================ */
+.dropdown {
+  position:relative!important;padding-right:28px!important;
+
+  &:after {
+  	content: '\e8aa';
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:16px;
+	font-family:'shiva';
+  }
+
+  .dropdown-content {
+
+  	min-width:180px;position:absolute;
+  
+    @extend .depth3;
+    @include transition(all, 0.2s, ease-in-out);
+
+  }
+}

@@ -1,0 +1,33 @@
+/** Tabs.css
+/** ================================ */
+
+.tabs {
+	width:98%;padding:2%;display: table;
+	.tabs-nav { 
+		float:left;width:100%;
+		li {
+			float:left;background:#f9f9f9;
+
+			a {
+				text-decoration: none;color:#999;padding:10px;
+			}
+		}
+		.active {
+			border-bottom:2px solid $dark-primary-color;
+			a {
+				color: $dark-primary-color; 
+			}
+		}
+	}
+.tabs-content {
+	clear: both;
+    display: table;
+    float: left;
+    margin: 20px 0;
+    width: 100%;
+	.active {}
+	.tab-pane { display: none; }
+	.tab-pane.active { display: block; }
+}
+
+}

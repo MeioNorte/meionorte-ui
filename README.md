@@ -1,2 +1,2 @@
-# meionorte-ui
-Meio Norte User Interface
+# shiva-ui
+Shiva User Interface

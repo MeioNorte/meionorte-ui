@@ -1,0 +1,12 @@
+/** Breadcrumb
+/** ================================ */
+.pagination-container {
+  
+  padding:40px 0;text-align:center;
+  @extend .full-width;
+
+  .pagination {
+    display:inline-block;
+  }
+
+}
